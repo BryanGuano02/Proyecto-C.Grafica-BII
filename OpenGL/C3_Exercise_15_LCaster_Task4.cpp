@@ -27,7 +27,7 @@ const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1080;
 
 // camera
-Camera camera(glm::vec3(2000.0f, 50.0f, 5000.0f));
+Camera camera(glm::vec3(2050.0f, 50.0f, 5100.0f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -103,12 +103,23 @@ int main()
     //Erik
     Model ourModel("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/city/city.obj");
     Model ourModel1("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/mp5/mp5.obj");
-    */
-    /*
+    
+    // Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle - free - fire/criminalbundle.obj");
+     Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/dogpug/pug.obj");
+
+     Model ourModel3("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/lampara/lamp.obj");
+
+
+    /*"C:\Users\USER\Documents\Visual Studio 2022\OpenGL\OpenGL\model\christmas_tree_2\arbol.obj");
+
+
+
+
     Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/rusted_waste_container_low_poly/container.obj");
     Model ourModel4("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/street_lantern/sin_nombre.obj");
-    
-    Model ourModel6("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle - free - fire/criminalbundle.obj");
+    "C:\Users\USER\Documents\Visual Studio 2022\OpenGL\OpenGL\model\lampara\lamp.obj"
+    "C:\Users\USER\Documents\Visual Studio 2022\OpenGL\OpenGL\model\dogpug\pug.obj"
+    Model ourModel1("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle - free - fire/criminalbundle.obj");
     */
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
@@ -174,16 +185,28 @@ int main()
         glm::vec3(0.04f, 11.84f, 15.12f),
         glm::vec3(20.88f, 4.3f, 8.9f)
     };
-
-
+  
     glm::vec3 mp5Positions[] = {
             glm::vec3(2050.0f, 50.0f, 5000.0f),
             glm::vec3(2000.0f, 50.0f, 5050.0f),
             glm::vec3(2000.0f, 50.0f, 5050.0f),
             glm::vec3(-9.30f, 5.0f, 12.7f),
             glm::vec3(0.0f, 0.0f, 0.0f),
-    };
 
+    glm::vec3 pugPositions[] = {
+             glm::vec3(2900.0f, 0.0f, 3000.0f),
+              glm::vec3(1000.0f, 0.0f, 3000.0f)
+           
+
+
+    glm::vec3 lampPositions[] = {
+            glm::vec3(1900.0f, -80.0f, 6200.0f),
+            glm::vec3(1010.0f, -80.0f, 6200.0f),
+            glm::vec3(2800.0f, -80.0f, 6200.0f)
+
+
+    };
+   
 
     // second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
     unsigned int VBO, lightCubeVAO;
@@ -312,7 +335,6 @@ int main()
         ourModel.Draw(lightingShader);
 
 
-
         //Luna
         glm::mat4 model2 = model;
         model2 = glm::mat4(1.0f);
@@ -321,7 +343,7 @@ int main()
         lightingShader.setMat4("model", model2);
         ourModel2.Draw(lightingShader);
 
-
+/*
 
         for (unsigned int i = 0; i < 6; i++) {
             glm::mat4 model = glm::mat4(1.0f);
@@ -329,7 +351,40 @@ int main()
             model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
             lightingShader.setMat4("model", model);
             ourModel1.Draw(lightingShader);
-        }
+        }*/
+
+       glm::mat4 model1 = model;
+       model1 = glm::mat4(1.0f);
+       model1 = glm::translate(model1, glm::vec3(2000.0f, 50.0f, 5010.0f));
+       model1 = glm::rotate(model1, glm::radians(10.0f), glm::vec3(1.0f, 0.75f, 1.0f));
+       model1 = glm::scale(model1, glm::vec3(0.5f, 0.5f, 0.5f));
+       lightingShader.setMat4("model", model1);
+       ourModel1.Draw(lightingShader);
+       
+
+       glm::mat4 model2 = model1;
+       for (unsigned int i = 0; i < pugPositions[i].length(); i++)
+       {
+                  
+           model2 = glm::mat4(1.0f);
+           model2 = glm::translate(model2, pugPositions[i]);
+           model2 = glm::scale(model2, glm::vec3(100.0f, 100.0f, 100.0f));
+           lightingShader.setMat4("model", model2);
+           ourModel2.Draw(lightingShader);
+       }
+
+      
+       glm::mat4 model3 = model2;
+       for (unsigned int i = 0; i < lampPositions[i].length(); i++)
+       {
+    
+           model3 = glm::mat4(1.0f);
+           model3 = glm::translate(model3, lampPositions[i]);
+           model3 = glm::scale(model3, glm::vec3(100.0f, 100.0f, 100.0f));
+           lightingShader.setMat4("model", model3);
+           ourModel3.Draw(lightingShader);
+       }
+        
 
 
         lightCubeShader.use();
