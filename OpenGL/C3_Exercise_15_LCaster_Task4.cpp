@@ -89,13 +89,15 @@ int main()
     Shader lightingShader("shaders/shader_exercise15t4_casters.vs", "shaders/shader_exercise15t4_casters.fs");
 	Shader lightCubeShader("shaders/shader_exercise15_lightcube.vs", "shaders/shader_exercise15_lightcube.fs");
 
-    Model ourModel("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/city/city.obj");
-    Model ourModel1("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/carroRollsRoyce/carroRollsRoyce.obj");
-    Model ourModel2("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/rusted_waste_container_low_poly/container.obj");
-    Model ourModel4("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/street_lantern/sin_nombre.obj");
-    Model ourModel5("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/mp5/mp5.obj");
-    Model ourModel6("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle-free-fire/criminalbundle.obj");
+    Model ourModel("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/city/city.obj");
+    Model ourModel1("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/christmas_tree_2/arbol.obj");
 
+    /*
+    Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/rusted_waste_container_low_poly/container.obj");
+    Model ourModel4("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/street_lantern/sin_nombre.obj");
+    Model ourModel5("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/mp5/mp5.obj");
+    Model ourModel6("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle - free - fire/criminalbundle.obj");
+    */
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -145,55 +147,6 @@ int main()
         -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f
     };
 
-//Exercise 15 Task 1
-//positions all containers
-glm::vec3 cubePositions[] = {
-        glm::vec3(4.0f, 3.4f, -6.0f),
-        glm::vec3(4.4f, 3.4f, -6.0f),
-        glm::vec3(4.2f, 3.8f, -6.0f),
-        glm::vec3(-3.8f, -2.0f, -12.3f),
-        glm::vec3( 2.4f, -0.4f, -3.5f),
-        glm::vec3(-1.7f,  3.4f, -7.5f),
-        glm::vec3(-1.3f,  3.4f, -7.5f),
-        glm::vec3(-2.1f,  3.4f, -7.5f),
-        glm::vec3(-1.5f,  3.8f, -7.5f),
-        glm::vec3(-1.9f,  3.8f, -7.5f),
-
-        glm::vec3(4.0f,  3.4f, -3.0f),
-        glm::vec3(4.4f,  3.4f, -3.0f),
-        glm::vec3(4.0f,  3.8f, -3.0f),
-        glm::vec3(4.4f,  3.8f, -3.0f),
-
-        glm::vec3(2.0f,  3.4f, -4.5f),
-        glm::vec3(1.2f,  3.4f, -4.5f),
-        glm::vec3(0.4f,  3.4f, -4.5f),
-        glm::vec3(-0.4f,  3.4f, -5.7f),
-        glm::vec3(-1.2f,  3.4f, -5.7f),
-        glm::vec3(-2.0f,  3.4f, -5.7f)
-    };
-
-glm::vec3 cubePositions1[] = {
-        glm::vec3(19.1f,  2.89f, 8.90f),
-        glm::vec3(18.99f,  2.96f, 8.90f),
-        glm::vec3(19.08f,  3.87f, 8.90f),
-        glm::vec3(19.0f,  3.18f, 8.90f),
-        glm::vec3(19.13f,  3.59f, 8.90f),//bien
-        glm::vec3(19.20f,  3.70f, 9.350f),
-        glm::vec3(19.0f,  3.15f, 9.35f),
-        glm::vec3(19.0f,  3.65f, 9.35f),
-        glm::vec3(18.90f,  3.53f, 9.35f),
-        glm::vec3(18.80f,  3.73f, 9.35f)
-};
-
-glm::vec3 oilPositions[] = {
-        glm::vec3(2.0f, 3.2f, -7.0f),
-        glm::vec3(14.0f, 2.9f, 6.0f),
-};
-
-glm::vec3 containerPositions[] = {
-        glm::vec3(9.0f, 3.2f, -0.5f),
-        glm::vec3(15.5f, 2.9f, 5.1f),
-};
 
 glm::vec3 pointLightPositions[] = {
         glm::vec3(2.7f,  6.0f, 9.2f),
@@ -209,51 +162,12 @@ glm::vec3 pointLightPositions[] = {
         glm::vec3(20.88f, 4.3f, 8.9f)
 };
 
-glm::vec3 lamparaPositions[] = {
-        glm::vec3(2.7f,  5.53f, 9.2f),
-        glm::vec3(2.7f,  5.53f, 13.1f),
-        glm::vec3(-9.30f, 5.53f, 9.4f),
-        glm::vec3(-9.30f, 5.53f, 12.7f),
-        glm::vec3(20.88f, 3.81f, 8.9f),
-};
-
-glm::vec3 mp5Positions[] = {
-        glm::vec3(2.0f,  5.0f, 9.2f),
-        glm::vec3(1.0f,  5.0f, 13.1f),
-        glm::vec3(-6.30f, 5.0f, 9.4f),
-        glm::vec3(-9.30f, 5.0f, 12.7f),
-        glm::vec3(0.0f, 0.0f, 0.0f),
-};
-
-
-glm::vec3 criminalRojoPositions[] = {
-        glm::vec3(2.50f, 3.21f, -7.0f),
-        glm::vec3(19.0f,  2.81f, 9.2f),
-        glm::vec3(-6.30f, 4.97f, 9.4f),
-        glm::vec3(-15.30f, 3.21f, 12.7f),
-        glm::vec3(0.0f, 0.0f, 0.0f),
-};
- // first, configure the cube's VAO (and VBO)
- unsigned int VBO, cubeVAO;
- glGenVertexArrays(1, &cubeVAO);
- glGenBuffers(1, &VBO);
-
- glBindBuffer(GL_ARRAY_BUFFER, VBO);
- glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
- glBindVertexArray(cubeVAO);
- glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
- glEnableVertexAttribArray(0);
- glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
- glEnableVertexAttribArray(1);
- glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
- glEnableVertexAttribArray(2);
-
 
  // second, configure the light's VAO (VBO stays the same; the vertices are the same for the light object which is also a 3D cube)
- unsigned int lightCubeVAO;
- glGenVertexArrays(1, &lightCubeVAO);
- glBindVertexArray(lightCubeVAO);
+   unsigned int VBO, lightCubeVAO;
+  glGenVertexArrays(1, &lightCubeVAO);
+  glGenBuffers(1, &VBO);
+  glBindVertexArray(lightCubeVAO);
 
  glBindBuffer(GL_ARRAY_BUFFER, VBO);
  
@@ -349,29 +263,9 @@ glm::vec3 criminalRojoPositions[] = {
      lightingShader.setMat4("projection", projection);
      lightingShader.setMat4("view", view);
 
-     glBindVertexArray(cubeVAO);
-     for (unsigned int i = 0; i < 20; i++) {
-         //calculate the model matrix for each object and pass it to the shader before drawing
-         glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, cubePositions[i]);
-         model = glm::scale(model, glm::vec3(0.4f)); // Puedes ajustar el valor de escala según tus necesidade
-         lightingShader.setMat4("model", model);
-         glDrawArrays(GL_TRIANGLES, 0, 36);
-     }
+    
 
      
-
-     glBindVertexArray(cubeVAO);
-     for (unsigned int i = 0; i < 10; i++) {
-         //calculate the model matrix for each object and pass it to the shader before drawing
-         glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, cubePositions1[i]);
-         float angle = totalRotationRadians + glm::radians(20.0f) * i; // Puedes ajustar el factor de rotación aquí
-         model = glm::rotate(model, angle, glm::vec3(1.0f, 0.3f, 0.5f));
-         model = glm::scale(model, glm::vec3(0.04f)); // Puedes ajustar el valor de escala según tus necesidade
-         lightingShader.setMat4("model", model);
-         glDrawArrays(GL_TRIANGLES, 0, 36);
-     }
 
      // world transformation
      
@@ -382,59 +276,15 @@ glm::vec3 criminalRojoPositions[] = {
      lightingShader.setMat4("model", model);
      ourModel.Draw(lightingShader);
 
+     glm::mat4 model1 = glm::mat4(1.0f);
+     model1 = glm::translate(model1, glm::vec3(1999.0f, 50.0f, 5000.0f));
+     model1 = glm::scale(model1, glm::vec3(0.5f, 0.5f, 0.5f));
+     
+     lightingShader.setMat4("model", model1);
+     ourModel1.Draw(lightingShader);
+   
 
-     for (unsigned int i = 0; i < 2; i++) {
-         glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, glm::vec3(1800.0f, 40.f, 5000.0f));
-         model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
-         lightingShader.setMat4("model", model);
-         ourModel1.Draw(lightingShader);
-     }
-
-     for (unsigned int i = 0; i < 5; i++) {
-         glm::mat4 model = glm::mat4(1.0f);
-         if (i == 0) {
-             model = glm::translate(model, criminalRojoPositions[i]);
-             model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-             float angle = totalRotationRadians + glm::radians(20.0f) * i; ; // Ángulo de rotación en radianes (45 grados en este ejemplo)
-             model = glm::rotate(model, angle, glm::vec3(0.0f, 1.0f, 0.0f)); // Rotación alrededor del eje Y
-             lightingShader.setMat4("model", model);
-             ourModel6.Draw(lightingShader);
-         }
-         else {
-             model = glm::translate(model, criminalRojoPositions[i]);
-             model = glm::scale(model, glm::vec3(0.2f, 0.2f, 0.2f));
-             lightingShader.setMat4("model", model);
-             ourModel6.Draw(lightingShader);
-         }
-         
-     }
-
-     for (unsigned int i = 0; i < 6; i++) {
-         glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, mp5Positions[i]);
-         model = glm::scale(model, glm::vec3(0.01f, 0.01f, 0.01f));
-         lightingShader.setMat4("model", model);
-         ourModel5.Draw(lightingShader);
-     }
-
-     for (unsigned int i = 0; i < 6; i++) {
-         glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, lamparaPositions[i]);
-         model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
-         lightingShader.setMat4("model", model);
-         ourModel4.Draw(lightingShader);
-     }
-	 
-     for (unsigned int i = 0; i < 2; i++) {
-         glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, containerPositions[i]);
-         model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
-         lightingShader.setMat4("model", model);
-         ourModel2.Draw(lightingShader);
-     }
-
-
+     
      lightCubeShader.use();
      lightCubeShader.setMat4("projection", projection);
      lightCubeShader.setMat4("view", view);
@@ -468,7 +318,6 @@ glm::vec3 criminalRojoPositions[] = {
  
  // optional: de-allocate all resources once they've outlived their purpose:
  // ------------------------------------------------------------------------
- glDeleteVertexArrays(1, &cubeVAO);
  glDeleteVertexArrays(1, &lightCubeVAO);
  glDeleteBuffers(1, &VBO);
 
