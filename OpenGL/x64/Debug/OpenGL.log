@@ -1,0 +1,20 @@
+﻿  C3_Exercise_15_LCaster_Task4.cpp
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL_Stuff\include\learnopengl\shader.h(55,40): warning C4101: 'e': unreferenced local variable
+  (compiling source file 'C3_Exercise_15_LCaster_Task4.cpp')
+  
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL_Stuff\include\learnopengl\mesh.h(84,50): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
+  (compiling source file 'C3_Exercise_15_LCaster_Task4.cpp')
+  
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(285,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(327,56): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(328,59): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(338,50): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(339,53): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(514,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(515,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(519,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(520,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(522,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(523,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(532,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  OpenGL.vcxproj -> C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\x64\Debug\OpenGL.exe

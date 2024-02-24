@@ -1,0 +1,11 @@
+Model Information:
+* title:	Oil Drums
+* source:	https://sketchfab.com/3d-models/oil-drums-f98003d19cd247f8aa4daad50c28512a
+* author:	Oliver Triplett (https://sketchfab.com/OliverTriplett)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Oil Drums" (https://sketchfab.com/3d-models/oil-drums-f98003d19cd247f8aa4daad50c28512a) by Oliver Triplett (https://sketchfab.com/OliverTriplett) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
