@@ -94,15 +94,27 @@ int main()
 
    // Model ourModel("D:/visualproject/OpenGL/Project1/model/city/city.obj");
     
+
+    //Bryan
+    Model ourModel("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/city/city.obj");
+    Model ourModel1("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/mp5/mp5.obj");
+    Model ourModel2("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/la_luna__viaje_virtual_guiado__3d___vr/luna.obj");
+    /*
+    //Erik
     Model ourModel("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/city/city.obj");
     Model ourModel1("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/mp5/mp5.obj");
-   // Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle - free - fire/criminalbundle.obj");
+    
+    // Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/criminalbundle - free - fire/criminalbundle.obj");
      Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/dogpug/pug.obj");
 
      Model ourModel3("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/lampara/lamp.obj");
 
 
-    /*"C:\Users\USER\Documents\Visual Studio 2022\OpenGL\OpenGL\model\christmas_tree_2\arbol.obj"
+    /*"C:\Users\USER\Documents\Visual Studio 2022\OpenGL\OpenGL\model\christmas_tree_2\arbol.obj");
+
+
+
+
     Model ourModel2("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/rusted_waste_container_low_poly/container.obj");
     Model ourModel4("C:/Users/USER/Documents/Visual Studio 2022/OpenGL/OpenGL/model/street_lantern/sin_nombre.obj");
     "C:\Users\USER\Documents\Visual Studio 2022\OpenGL\OpenGL\model\lampara\lamp.obj"
@@ -158,27 +170,34 @@ int main()
         -0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f,  1.0f
     };
 
+    
 
     glm::vec3 pointLightPositions[] = {
-            glm::vec3(2.7f,  6.0f, 9.2f),
-            glm::vec3(2.7f,  6.0f, 13.1f),
-            glm::vec3(-9.30f, 6.0f, 9.4f),
-            glm::vec3(-9.30f, 6.0f, 12.7f),
-            glm::vec3(0.04f, 12.0f, 15.22f),
-            glm::vec3(0.04f, 12.0f, 15.12f),
-            glm::vec3(0.04f, 11.92f, 15.22f),
-            glm::vec3(0.04f, 11.92f, 15.12f),
-            glm::vec3(0.04f, 11.84f, 15.22f),
-            glm::vec3(0.04f, 11.84f, 15.12f),
-            glm::vec3(20.88f, 4.3f, 8.9f)
+        glm::vec3(2.7f,  6.0f, 9.2f),
+        glm::vec3(2.7f,  6.0f, 13.1f),
+        glm::vec3(-9.30f, 6.0f, 9.4f),
+        glm::vec3(-9.30f, 6.0f, 12.7f),
+        glm::vec3(0.04f, 12.0f, 15.22f),
+        glm::vec3(0.04f, 12.0f, 15.12f),
+        glm::vec3(0.04f, 11.92f, 15.22f),
+        glm::vec3(0.04f, 11.92f, 15.12f),
+        glm::vec3(0.04f, 11.84f, 15.22f),
+        glm::vec3(0.04f, 11.84f, 15.12f),
+        glm::vec3(20.88f, 4.3f, 8.9f)
     };
- 
+  
+    glm::vec3 mp5Positions[] = {
+            glm::vec3(2050.0f, 50.0f, 5000.0f),
+            glm::vec3(2000.0f, 50.0f, 5050.0f),
+            glm::vec3(2000.0f, 50.0f, 5050.0f),
+            glm::vec3(-9.30f, 5.0f, 12.7f),
+            glm::vec3(0.0f, 0.0f, 0.0f),
 
     glm::vec3 pugPositions[] = {
              glm::vec3(2900.0f, 0.0f, 3000.0f),
               glm::vec3(1000.0f, 0.0f, 3000.0f)
            
-    };
+
 
     glm::vec3 lampPositions[] = {
             glm::vec3(1900.0f, -80.0f, 6200.0f),
@@ -251,6 +270,7 @@ int main()
         {
             totalRotationRadians -= glm::radians(360.0f);
         }
+       
 
         // be sure to activate shader when setting uniforms/drawing objects
         lightingShader.use();
@@ -261,31 +281,32 @@ int main()
 
         // directional light
         lightingShader.setVec3("dirLight.direction", 0.0f, 0.2f, 0.0f);
-        lightingShader.setVec3("dirLight.ambient", 0.6f, 0.6f, 0.6f);
-        lightingShader.setVec3("dirLight.diffuse", 0.2f, 0.2f, 0.2f);
+        lightingShader.setVec3("dirLight.ambient", 0.2f, 0.2f, 0.2f); // Ajusta la intensidad y el color de la luz ambiental
+        lightingShader.setVec3("dirLight.diffuse", 0.1f, 0.1f, 0.1f); // Ajusta la intensidad y el color de la luz difusa
         lightingShader.setVec3("dirLight.specular", 0.0f, 0.0f, 0.0f);
-        // point light 1
+
+        // point light
         for (unsigned int i = 0; i < 11; i++) {
             std::string lightName = "pointLights[" + std::to_string(i) + "].";
 
             lightingShader.setVec3(lightName + "position", pointLightPositions[i]);
-            lightingShader.setVec3(lightName + "ambient", 0.05f, 0.05f, 0.05f);
-            lightingShader.setVec3(lightName + "diffuse", 0.8f, 0.8f, 0.8f);
-            lightingShader.setVec3(lightName + "specular", 1.0f, 1.0f, 1.0f);
+            lightingShader.setVec3(lightName + "ambient", 0.05f, 0.05f, 0.05f); // Ajusta la intensidad y el color de la luz ambiental
+            lightingShader.setVec3(lightName + "diffuse", 0.3f, 0.3f, 0.3f); // Ajusta la intensidad y el color de la luz difusa
+            lightingShader.setVec3(lightName + "specular", 0.5f, 0.5f, 0.5f); // Ajusta la intensidad y el color de la luz especular
             lightingShader.setFloat(lightName + "constant", 1.0f);
-            lightingShader.setFloat(lightName + "linear", 0.09);
-            lightingShader.setFloat(lightName + "quadratic", 0.032);
+            lightingShader.setFloat(lightName + "linear", 0.09f);
+            lightingShader.setFloat(lightName + "quadratic", 0.032f);
         }
 
         // spotLight
         lightingShader.setVec3("spotLight.position", camera.Position);
         lightingShader.setVec3("spotLight.direction", camera.Front);
-        lightingShader.setVec3("spotLight.ambient", 0.1f, 0.1f, 0.1f);  // Ajusta el valor para hacer la luz ambiental más intensa
-        lightingShader.setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);  // Ajusta el valor para hacer la luz difusa más intensa
-        lightingShader.setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f); // Ajusta el valor para hacer la luz especular más intensa
+        lightingShader.setVec3("spotLight.ambient", 0.05f, 0.05f, 0.05f); // Ajusta la intensidad y el color de la luz ambiental
+        lightingShader.setVec3("spotLight.diffuse", 0.2f, 0.2f, 0.2f); // Ajusta la intensidad y el color de la luz difusa
+        lightingShader.setVec3("spotLight.specular", 0.4f, 0.4f, 0.4f); // Ajusta la intensidad y el color de la luz especular
         lightingShader.setFloat("spotLight.constant", 0.1f);
-        lightingShader.setFloat("spotLight.linear", 0.09);
-        lightingShader.setFloat("spotLight.quadratic", 0.032);
+        lightingShader.setFloat("spotLight.linear", 0.09f);
+        lightingShader.setFloat("spotLight.quadratic", 0.032f);
         lightingShader.setFloat("spotLight.cutOff", glm::cos(glm::radians(12.5f)));
         lightingShader.setFloat("spotLight.outerCutOff", glm::cos(glm::radians(15.0f)));
 
@@ -294,7 +315,7 @@ int main()
 
 
         // view/projection transformations
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 10000.0f);
+        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100000.0f);
         glm::mat4 view = camera.GetViewMatrix();
         lightingShader.setMat4("projection", projection);
         lightingShader.setMat4("view", view);
@@ -303,16 +324,34 @@ int main()
 
 
 
-        // world transformation
 
+
+        //City
 
         glm::mat4 model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-6.0f, -8.0f, -0.4f)); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
         lightingShader.setMat4("model", model);
         ourModel.Draw(lightingShader);
-    
-        
+
+
+        //Luna
+        glm::mat4 model2 = model;
+        model2 = glm::mat4(1.0f);
+        model2 = glm::translate(model2, glm::vec3(-25000.0f, 8000.0f, 1000.0f));
+        model2 = glm::scale(model2, glm::vec3(10000.0f, 10000.0f, 10000.0f));
+        lightingShader.setMat4("model", model2);
+        ourModel2.Draw(lightingShader);
+
+/*
+
+        for (unsigned int i = 0; i < 6; i++) {
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, mp5Positions[i]);
+            model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+            lightingShader.setMat4("model", model);
+            ourModel1.Draw(lightingShader);
+        }*/
 
        glm::mat4 model1 = model;
        model1 = glm::mat4(1.0f);
@@ -346,8 +385,7 @@ int main()
            ourModel3.Draw(lightingShader);
        }
         
-      
-     
+
 
         lightCubeShader.use();
         lightCubeShader.setMat4("projection", projection);
