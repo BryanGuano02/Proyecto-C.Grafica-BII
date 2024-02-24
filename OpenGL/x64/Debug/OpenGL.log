@@ -5,18 +5,14 @@ C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL_Stuff\include\learnope
 C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL_Stuff\include\learnopengl\mesh.h(84,50): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
   (compiling source file 'C3_Exercise_15_LCaster_Task4.cpp')
   
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(285,25): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(327,56): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(328,59): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(338,50): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(339,53): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(514,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(515,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(519,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(520,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(522,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(523,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(532,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(221,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(422,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(423,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(427,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(428,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(430,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(431,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\alejo\Documents\Visual Studio 2022\OpenGL\OpenGL\C3_Exercise_15_LCaster_Task4.cpp(440,31): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 glfw3.lib(init.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(init.obj)' or at ''; linking object as if no debug info
 glfw3.lib(window.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(window.obj)' or at ''; linking object as if no debug info
 glfw3.lib(input.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(input.obj)' or at ''; linking object as if no debug info

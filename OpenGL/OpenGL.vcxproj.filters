@@ -29,6 +29,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="textures\container2.png">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+    <Image Include="textures\container2_specular.png">
+      <Filter>Source Files\textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="shaders\shader_exercise15_lightcube.fs">
       <Filter>Source Files\shaders</Filter>
     </None>
