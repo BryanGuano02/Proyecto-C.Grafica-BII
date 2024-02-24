@@ -90,7 +90,7 @@ int main()
 	Shader lightCubeShader("shaders/shader_exercise15_lightcube.vs", "shaders/shader_exercise15_lightcube.fs");
 
     Model ourModel("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/city/city.obj");
-    Model ourModel1("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/oil_drums/oil.obj");
+    Model ourModel1("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/carroRollsRoyce/carroRollsRoyce.obj");
     Model ourModel2("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/rusted_waste_container_low_poly/container.obj");
     Model ourModel4("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/street_lantern/sin_nombre.obj");
     Model ourModel5("C:/Users/alejo/Documents/Visual Studio 2022/OpenGL/OpenGL/model/mp5/mp5.obj");
@@ -385,7 +385,7 @@ glm::vec3 criminalRojoPositions[] = {
 
      for (unsigned int i = 0; i < 2; i++) {
          glm::mat4 model = glm::mat4(1.0f);
-         model = glm::translate(model, oilPositions[i]);
+         model = glm::translate(model, glm::vec3(1800.0f, 40.f, 5000.0f));
          model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
          lightingShader.setMat4("model", model);
          ourModel1.Draw(lightingShader);
