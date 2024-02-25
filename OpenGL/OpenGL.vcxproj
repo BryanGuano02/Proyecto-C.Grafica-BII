@@ -136,14 +136,14 @@
     <ClCompile Include="C3_Exercise_15_LCaster_Task4.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="textures\container2.png" />
-    <Image Include="textures\container2_specular.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="shaders\shader_exercise15t4_casters.fs" />
     <None Include="shaders\shader_exercise15t4_casters.vs" />
     <None Include="shaders\shader_exercise15_lightcube.fs" />
     <None Include="shaders\shader_exercise15_lightcube.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="textures\container2.png" />
+    <Image Include="textures\container2_specular.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
